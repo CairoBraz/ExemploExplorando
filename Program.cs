@@ -1,21 +1,204 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-string dataString = "2024-12-12 00:24";
+Dictionary<string, string> dicionario = new Dictionary<string, string>();
 
-bool suceso = DateTime.TryParseExact(dataString,
-                       "yyyy-MM-dd HH:mm",
-                       CultureInfo.InvariantCulture,
-                       DateTimeStyles.None, out DateTime data);
+dicionario.Add("MG", "Minas erais");
+dicionario.Add("SP", "São Paulo");
+dicionario.Add("RJ", "Rio de Janeiro");
 
-if (suceso)
+foreach (var item in dicionario)
 {
-    Console.WriteLine($"Data convertida com sucesso! {data}");
+    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+}
+
+Console.WriteLine("Removendo um valor");
+
+dicionario.Remove("RJ");
+foreach (var item in dicionario)
+{
+    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+}
+
+Console.WriteLine("Alterando um valor");
+
+dicionario["MG"] = "Minas Gerais";
+foreach (var item in dicionario)
+{
+    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+}
+
+Console.WriteLine("Verificando se um valor já existe");
+string chave = "MS";
+
+if (dicionario.ContainsKey(chave))
+{
+    Console.WriteLine($"A chave {chave} já existe! Está atribuída ao dado {dicionario[chave]}");
 }
 else
 {
-    Console.WriteLine($"A data {dataString} is not valid.");
+    Console.WriteLine($"O valor não existe! É seguro adicionar a chave: {chave}");
 }
+
+
+
+
+
+
+
+
+// Stack<int> pilha = new Stack<int>();
+
+// pilha.Push(2);
+// pilha.Push(4);
+// pilha.Push(6);
+// pilha.Push(8);
+
+// foreach (var item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo um item da pilha. Item removido {pilha.Pop()}");
+
+// pilha.Push(100);
+// foreach (var item in pilha)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Queue<int> fila = new Queue<int>();
+
+// fila.Enqueue(2);
+// fila.Enqueue(4);
+// fila.Enqueue(6);
+// fila.Enqueue(8);
+
+// foreach (var item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+// Console.WriteLine($"Removendo da fila o item: {fila.Dequeue()}!");
+
+// fila.Enqueue(10);
+
+// foreach (var item in fila)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//new ExemploExceção().Metodo1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try
+// {
+//     //string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+//     string[] linhas = File.ReadAllLines("Arquivos2/arquivoLeitura.txt");
+
+//     foreach (string linha in linhas)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// catch (FileNotFoundException ex)
+// {
+//     Console.WriteLine($"Arquivo não encontrado. {ex.Message}");
+// }
+// catch (DirectoryNotFoundException ex)
+// {
+//     Console.WriteLine($"DirectoryNotFound. {ex.Message}");
+// }
+// catch (Exception ex)
+// {
+//     Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}");
+
+// }
+// finally
+// {
+//     Console.WriteLine("Chegou até aqui");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string dataString = "2024-12-12 00:24";
+
+// bool suceso = DateTime.TryParseExact(dataString,
+//                        "yyyy-MM-dd HH:mm",
+//                        CultureInfo.InvariantCulture,
+//                        DateTimeStyles.None, out DateTime data);
+
+// if (suceso)
+// {
+//     Console.WriteLine($"Data convertida com sucesso! {data}");
+// }
+// else
+// {
+//     Console.WriteLine($"A data {dataString} is not valid.");
+// }
 
 
 
