@@ -47,5 +47,11 @@ namespace ExemploExplorando.Models
         {
             Console.WriteLine($"nome: {NomeCompleto}, idade: {Idade}.");
         }
+
+        public void Deconstruct(out string nome, out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
     }
 }

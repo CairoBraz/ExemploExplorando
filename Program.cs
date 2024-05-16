@@ -1,44 +1,140 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
+using System.Reflection.Metadata;
 
-Dictionary<string, string> dicionario = new Dictionary<string, string>();
 
-dicionario.Add("MG", "Minas erais");
-dicionario.Add("SP", "São Paulo");
-dicionario.Add("RJ", "Rio de Janeiro");
+int numero = 20;
 
-foreach (var item in dicionario)
-{
-    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
-}
+bool ehPar = numero % 2 == 0;
 
-Console.WriteLine("Removendo um valor");
+Console.WriteLine("O número é: " + (ehPar ? "par" : "ímpar"));
 
-dicionario.Remove("RJ");
-foreach (var item in dicionario)
-{
-    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
-}
 
-Console.WriteLine("Alterando um valor");
 
-dicionario["MG"] = "Minas Gerais";
-foreach (var item in dicionario)
-{
-    Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
-}
 
-Console.WriteLine("Verificando se um valor já existe");
-string chave = "MS";
 
-if (dicionario.ContainsKey(chave))
-{
-    Console.WriteLine($"A chave {chave} já existe! Está atribuída ao dado {dicionario[chave]}");
-}
-else
-{
-    Console.WriteLine($"O valor não existe! É seguro adicionar a chave: {chave}");
-}
+
+
+
+
+
+
+
+
+
+
+// Pessoa p1 = new Pessoa("Cairo", "Braz");
+
+// (string nome, string sobrenome) = p1;
+
+// Console.WriteLine(nome);
+// Console.WriteLine(sobrenome);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// //var (sucesso, linhasArquivos, quantidadeLinhas) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+// var (sucesso, linhasArquivos, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+
+// if (sucesso)
+// {
+//     //Console.WriteLine("Total de linhas do arquivo: " + quantidadeLinhas);
+//     foreach (var linha in linhasArquivos)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo!");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (int, string, string, decimal) tupla = (1, "Cairo", "Braz", 1.78M);
+
+// ValueTuple<int, string, string, decimal> outraFormaTupla = (1, "Cairo", "Braz", 1.78M);
+
+// var tuplaUsandoCreate = ValueTuple.Create(1, "Cairo", "Braz", 1.78M);
+
+// Console.WriteLine("ID: " + tupla.Item1);
+// Console.WriteLine("Nome: " + tupla.Item2);
+// Console.WriteLine("Sobrenome: " + tupla.Item3);
+// Console.WriteLine("Altura: " + tupla.Item4);
+
+
+
+
+
+
+
+
+
+
+
+// Dictionary<string, string> dicionario = new Dictionary<string, string>();
+
+// dicionario.Add("MG", "Minas erais");
+// dicionario.Add("SP", "São Paulo");
+// dicionario.Add("RJ", "Rio de Janeiro");
+
+// foreach (var item in dicionario)
+// {
+//     Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+// }
+
+// Console.WriteLine("Removendo um valor");
+
+// dicionario.Remove("RJ");
+// foreach (var item in dicionario)
+// {
+//     Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+// }
+
+// Console.WriteLine("Alterando um valor");
+
+// dicionario["MG"] = "Minas Gerais";
+// foreach (var item in dicionario)
+// {
+//     Console.WriteLine($"Chave: {item.Key}. Valor: {item.Value}");
+// }
+
+// Console.WriteLine("Verificando se um valor já existe");
+// string chave = "MS";
+
+// if (dicionario.ContainsKey(chave))
+// {
+//     Console.WriteLine($"A chave {chave} já existe! Está atribuída ao dado {dicionario[chave]}");
+// }
+// else
+// {
+//     Console.WriteLine($"O valor não existe! É seguro adicionar a chave: {chave}");
+// }
 
 
 
