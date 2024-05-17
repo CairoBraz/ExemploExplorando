@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Nome_Produto": "Lápis",
+    "Preco": 1.25,
+    "DataVenda": "2024-05-16T23:10:28.6336631-03:00"
+  },
+  {
+    "Id": 2,
+    "Nome_Produto": "Borracha",
+    "Preco": 2.50,
+    "DataVenda": "2024-05-16T23:10:28.6473682-03:00"
+  }
+]
